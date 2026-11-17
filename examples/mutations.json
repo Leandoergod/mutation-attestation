@@ -1,0 +1,17 @@
+[
+  {"name": "hole-max-words-constant",
+   "anchor": "MAX_WORDS = 1000  # a documented limit that the test never checks\n",
+   "replace": "MAX_WORDS = 1  # a documented limit that the test never checks\n"},
+  {"name": "covered-unique-always-adds",
+   "anchor": "        if word not in seen:\n",
+   "replace": "        if True:\n"},
+  {"name": "crash-mean-guard-removed",
+   "anchor": "    if not words:\n        return 0.0\n",
+   "replace": "    pass\n"},
+  {"name": "no-start-exit-on-import",
+   "anchor": "READY = True  # module-level line; the no-start mutant replaces it with an exit on import\n",
+   "replace": "raise SystemExit(2)\n"},
+  {"name": "skipped-ambiguous-anchor",
+   "anchor": "    if not text:\n        return 0\n",
+   "replace": "    if not text:\n        return -1\n"}
+]
